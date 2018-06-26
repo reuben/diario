@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Turmas{% endblock %}</h1>
+  {% if g.user and g.user.lecturer %}
+    <a class="action" href="{{ url_for('chain.create') }}">Nova turma</a>
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+  {% for chain in chains %}
+    <article class="post">
+      <header>
+        <div>
+          <h1><a href="{{ url_for('chain.chain_get', chain_id=chain['id']) }}">{{ chain['name'] }}</a></h1>
+          <div class="about">por {{ chain['username'] }}</div>
+        </div>
+      </header>
+    </article>
+    {% if not loop.last %}
+      <hr>
+    {% endif %}
+  {% endfor %}
+{% endblock %}
