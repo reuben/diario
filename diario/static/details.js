@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('novanota').addEventListener('click', function() {
         let header = document.getElementById('thead').children[0];
-        let newEvent = document.createElement('td');
+        let newEvent = document.createElement('th');
         newEvent.innerHTML = '<input type="text" name="description" placeholder="Avaliação">';
         header.insertBefore(newEvent, header.children[header.children.length-1]);
 

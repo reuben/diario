@@ -11,7 +11,6 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: serif;
   color: #377ba8;
   margin: 1rem 0;
 }
@@ -35,6 +34,10 @@ nav {
 nav h1 {
   flex: auto;
   margin: 0;
+}
+
+h1 {
+  font-size: 1.5rem !important;
 }
 
 nav h1 a {
@@ -116,7 +119,7 @@ nav ul li a, nav ul li span, header .action {
 }
 
 .content input, .content textarea {
-  margin-bottom: 1em;
+  /*margin-bottom: 1em;*/
 }
 
 .content textarea {
@@ -133,10 +136,11 @@ input[type=submit] {
   min-width: 10em;
 }
 
-table, th, td {
-  border: 1px solid gray;
-}
-
 .hidden {
   display: none;
 }
+
+table input {
+  border-style: dotted;
+}
+

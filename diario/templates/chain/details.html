@@ -16,8 +16,8 @@
   <article class="post">
     <form method="post" id="notaform">
     <input type="hidden" id="student-count" value="{{ students|length }}">
-    <table>
-      <thead id="thead">
+    <table class="table">
+      <thead id="thead" class="thead-light">
         <tr>
           <th>Aluno</th>
           {% for description in descriptions %}
@@ -38,7 +38,7 @@
       {% endfor %}
       </tbody>
     </table>
-    <input type="submit" id="submitnotas" value="Salvar notas" class="hidden">
+    <input type="submit" id="submitnotas" class="btn btn-success hidden" value="Salvar notas">
     </form>
   </article>
   {% if g.user and g.user.lecturer %}
